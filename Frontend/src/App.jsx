@@ -1,35 +1,78 @@
-import { useState } from 'react'
+import { React, Component, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+// function App() {
+//   const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+//   return (
+//     <>
+//       <div>
+//         <a href="https://vitejs.dev" target="_blank">
+//           <img src={viteLogo} className="logo" alt="Vite logo" />
+//         </a>
+//         <a href="https://react.dev" target="_blank">
+//           <img src={reactLogo} className="logo react" alt="React logo" />
+//         </a>
+//       </div>
+//       <h1>Vite + React</h1>
+//       <div className="card">
+//         <button onClick={() => setCount((count) => count + 1)}>
+//           count is {count}
+//         </button>
+//         <p>
+//           Edit <code>src/App.jsx</code> and save to test HMR
+//         </p>
+//       </div>
+//       <p className="read-the-docs">
+//         Click on the Vite and React logos to learn more
+//       </p>
+//     </>
+//   )
+// }
+
+// export default App
+
+class App extends Component {
+  // Inicia el estado por default
+  constructor(props) {
+    super(props)
+    this.state = { apiResponse: ""}
+  }
+
+  // fetch los datos que viene de la API y guarda la respuesta en this.state.apResponse
+  callAPI() {
+    fetch("http://localhost:3000/testAPI")
+        .then(res => res.text())
+        .then(res => this.setState({ apiResponse: res }));
+  }
+
+  // Metodo del ciclo de vida de React que se encarga de ejecutar callAPI() despues de que el componente se monta
+  componentDidMount() {
+    this.callAPI()
+  }
+
+  render() {
+    return (
+      <div className='App'>
+        <header className='App-header'>
+          <div>
+            <a href="https://vitejs.dev" target="_blank">
+              <img src={viteLogo} className="logo" alt="Vite logo" />
+            </a>
+            <a href="https://react.dev" target="_blank">
+              <img src={reactLogo} className="logo react" alt="React logo" />
+            </a>
+          </div>
+
+          <h1 className='App-title'>Welcome to Vite + React</h1>
+        </header>
+        {/* La siguiente línea despliega el valor guardado en this.state.apiResponse */}
+        <p className='App-intro'> { this.state.apiResponse } </p>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    )
+  }
 }
 
 export default App
