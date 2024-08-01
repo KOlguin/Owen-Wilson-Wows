@@ -27,4 +27,22 @@ router.get("/all-directors", async(req, res) => {
     }
 })
 
+router.get("/first-and-last-wow", async(req, res) => {
+    try {
+        // Total de wows registrados hasta 01/08/2024 = 91
+        const {data: firstWow} = await axios.get("https://owen-wilson-wow-api.onrender.com/wows/ordered/0")
+        const {data: lastWow} = await axios.get("https://owen-wilson-wow-api.onrender.com/wows/ordered/90")
+        
+        res.json(
+            {
+                firstWowOrdered: firstWow, 
+                lastWowOrdered: lastWow
+            });
+    }
+    catch (error) {
+        console.log("Error al obtener todas las peliculas, ", error);
+        res.status(500).json({error: "Error interno del servidor"});
+    }
+})
+
 module.exports = router;
