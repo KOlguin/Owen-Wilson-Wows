@@ -45,4 +45,18 @@ router.get("/first-and-last-wow", async(req, res) => {
     }
 })
 
+router.get("/median-wow", async(req, res) => {
+    try {
+        // Total de wows registrados hasta 01/08/2024 = 91
+        // Mediana de wows = 91 / 2 = 45
+        const {data: medianWow} = await axios.get("https://owen-wilson-wow-api.onrender.com/wows/ordered/45")
+        
+        res.json(medianWow);
+    }
+    catch (error) {
+        console.log("Error al obtener todas las peliculas, ", error);
+        res.status(500).json({error: "Error interno del servidor"});
+    }
+})
+
 module.exports = router;
