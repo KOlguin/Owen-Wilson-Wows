@@ -7,6 +7,11 @@ const firstElementWowList = "0";
 // Total de wows registrados hasta 01/08/2024 = 91
 const actualLengthWowList = 91;
 
+function GetMovieDuration(timeAsString) {
+    // Base obtenida de https://stackoverflow.com/questions/6212305/how-can-i-compare-two-time-strings-in-the-format-hhmmss
+    var baseDate = Date.parse("01/01/2024 " + timeAsString)
+    return baseDate;
+}
 
 router.get("/all-movies", async(req, res) => {
     try {
@@ -28,6 +33,21 @@ router.get("/all-directors", async(req, res) => {
     }
     catch (error) {
         console.log("Error al obtener todos los directores, ", error);
+        res.status(500).json({error: "Error interno del servidor"});
+    }
+})
+
+router.get("/longest-movie-duration-wow", async(req, res) => {
+    try {
+        const {data: allWows} = await axios.get("https://owen-wilson-wow-api.onrender.com/wows/ordered/" + firstElementWowList + "-" + (actualLengthWowList - 1))
+        
+        // Base obtenida de https://www.geeksforgeeks.org/how-to-sort-json-object-arrays-based-on-a-key/
+        allWows.sort((a, b) => (GetMovieDuration(a.movie_duration) < GetMovieDuration(b.movie_duration) ? 1 : -1));
+
+        res.json(allWows[0]);
+    }
+    catch (error) {
+        console.log("Error al obtener todas las peliculas, ", error);
         res.status(500).json({error: "Error interno del servidor"});
     }
 })
