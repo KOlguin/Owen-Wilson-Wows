@@ -88,7 +88,7 @@ router.get("/median-wow", async(req, res) => {
             var median = (actualLengthWowList - 1) / 2; 
             const {data: medianWow} = await axios.get("https://owen-wilson-wow-api.onrender.com/wows/ordered/" + median);
         
-            res.json({medianData: [medianWow]});
+            res.json({medianData: medianWow});
         }
         
     }
