@@ -40,3 +40,9 @@ $theme-colors: (
   color: #fff;
 }
 
+#homeCategories {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
