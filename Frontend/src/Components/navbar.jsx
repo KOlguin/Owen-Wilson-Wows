@@ -1,13 +1,3 @@
-// import React from 'react'
-
-// const Navbar = () => {
-//     return (
-//         <div>Navbar</div>
-//     )
-// }
-
-// export default Navbar
-
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -22,7 +12,6 @@ function NavbarFunction() {
             .nav-link { color: #444444; font-weight: bold; font-family: Helvetica;}
 
         `}
-            {/* Agrandar font de nav link  */}
         </style>
 
         <Navbar sticky="top">
@@ -40,7 +29,7 @@ function NavbarFunction() {
                 <Navbar.Collapse className="justify-content-end">
                     <Nav>
                         <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/">Categorias</Nav.Link>
+                        <Nav.Link href="#homeCategories">Categorias</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
