@@ -1,0 +1,42 @@
+/* make the customizations
+$theme-colors: (
+  'info': tomato,
+  'danger': teal
+);
+
+/* import bootstrap to set changes */
+/* @import '~bootstrap/scss/bootstrap'; */
+
+#homeRectangle {
+  width: 100%;
+  background-color: #275DAD;
+  padding: 10%;
+  border: 8px;
+}
+
+@media (min-width:1281px) { 
+  #homeRectangle {
+    padding: 5%; 
+  }
+}
+
+#homeTitle {
+  color: #fff;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
+
+#homeIntro {
+  color: #fff;
+  font-family: Helvetica;
+  font-size: 18px;
+  text-align: center;
+}
+
+#homeOriginalAPI {
+  text-decoration: underline;
+  color: #fff;
+}
+
