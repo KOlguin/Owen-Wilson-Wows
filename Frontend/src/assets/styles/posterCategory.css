@@ -5,15 +5,22 @@
 
 .imgCol {
     display: flex;
-    justify-content: flex-end;
+    justify-content: end;
 } 
 
 .imgPoster {
     width: 50%;
+    height: fit-content;
 }
 
 @media (max-width: 500px) {
     .imgPoster {
         width: 75%;
+    }
+}
+
+@media (min-width:1281px) {
+    .imgPoster {
+        width: 25%;
     }
 }
