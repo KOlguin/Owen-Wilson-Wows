@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../Components/navbar'
-
 import CardCategoryGroup from '../Components/cardCategoryGroup'
+import Footer from '../Components/footer'
 
 import '../assets/styles/home.css'
 
@@ -17,8 +17,8 @@ const Home = () => {
             <div id="homeCategories">
                 <CardCategoryGroup />
             </div>
+            <Footer />
         </div>
-        
     )
 }
 
