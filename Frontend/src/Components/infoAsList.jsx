@@ -3,7 +3,6 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import '../assets/styles/infoAslist.css'
 
 function InfoList(props) {
-    console.log(props.info)
     var informationArray = props.info
 
     return (
