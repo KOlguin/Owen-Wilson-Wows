@@ -1,8 +1,49 @@
-import React from 'react'
+import { React, useState, useEffect } from 'react'
+import Navbar from '../Components/navbar'
+import Footer from '../Components/footer'
+import BreadcrumbCategory from '../Components/breadcrumbsForCategory'
+import InfoList from '../Components/infoAsList'
+
+import '../assets/styles/allMovies.css'
 
 const AllDirectors = () => {
+
+    const [directors, setDirectors] = useState([])
+    const [isLoading, setIsLoadnig] = useState(true)
+
+    useEffect(() => {
+        const fetchMovies = async () => {
+            try {
+                await fetch(`${import.meta.env.VITE_BACKEND_URL}/all-directors`)
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data)
+                    setDirectors(data)
+                    setIsLoadnig(false)
+                })
+                .catch((err) => {
+                    console.log(err.message)
+                })
+            } catch (error) {
+                console.error("Error al obtener a los directores", error)
+            }
+        }
+        fetchMovies()
+    }, [])
+
     return (
-        <div>Welcome to All Directors</div>
+        <div>
+            <Navbar />
+            <BreadcrumbCategory categoryName={"Todos los Directores"} />
+            <h1 className='categoryTitle'>Todos los Directores</h1>
+            <p className='categoryDescription'>Aquí encontraremos a todos los directores de películas registradas en las cuales el actor Owen Wilson ha dicho wow.</p>
+            {
+                isLoading ? 
+                <p className='categoryLoading'>Cargando...</p> : 
+                <InfoList info={directors} />
+            }
+            <Footer />
+        </div>
     )
 }
 
