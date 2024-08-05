@@ -35,7 +35,7 @@ function ListCategory(props) {
             <div className='listDiv'>
                 <ListGroup variant="flush">
                 {
-                    sortList[sortState].map(item => <ListGroup.Item style={{borderWidth: 0}}>{item}</ListGroup.Item>)
+                    sortList[sortState].map(item => <ListGroup.Item key={item} style={{borderWidth: 0}}>{item}</ListGroup.Item>)
                 }
                 </ListGroup>
             </div>
