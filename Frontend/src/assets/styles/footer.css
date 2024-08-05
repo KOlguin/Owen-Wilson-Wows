@@ -1,0 +1,22 @@
+footer {
+    padding-top: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #F6F6F6;
+    font-family: Helvetica;
+    /* position: relative;
+    bottom: 0; */
+}
+
+.footerInfo {
+    padding-top: 5px;
+    text-align: justify;
+    color: #aaa;
+    font-size: 15px;
+}
+
+#footerLink {
+    text-decoration: underline;
+    color: #aaa;
+    font-size: 15px;
+}

@@ -1,0 +1,40 @@
+.container-fluid {
+    margin-left: 11%;
+    margin-right: 11%;
+}
+
+.descriptionWow {
+    margin-left: 12.5%;
+}
+
+#imgColWow {
+    display: flex;
+    justify-content: start;
+} 
+
+#imgPosterWow {
+    width: 50%;
+    height: fit-content;
+}
+
+@media (max-width: 500px) {
+    #imgPosterWow {
+        width: 75%;
+    }
+}
+
+@media (min-width:1281px) {
+    #imgPosterWow {
+        width: 25%;
+    }
+}
+
+.vstack {
+    margin-left: 12.5%;
+    font-family: Helvetica;
+}
+
+.btn-secondary {
+    margin-left: 5px;
+    font-family: Helvetica;
+}

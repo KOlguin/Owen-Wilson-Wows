@@ -1,0 +1,27 @@
+.categoryTitle {
+    font-size: 36px;
+    font-family: Helvetica;
+    margin-top: 10px;
+    margin-left: 11%;
+    margin-right: 11%;
+    color: #257dad;
+    font-weight: bold;
+}
+
+.categoryDescription {
+    font-size: 16px;
+    font-family: Helvetica;
+    margin-top: 10px;
+    margin-left: 11%;
+    margin-right: 11%;
+}
+
+.categoryLoading {
+    font-size: 18px;
+    font-family: Helvetica;
+    margin-top: 10px;
+    margin-left: 11%;
+    margin-right: 11%;
+    font-weight: bold;
+    text-align: center;
+}
