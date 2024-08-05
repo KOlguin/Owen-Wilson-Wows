@@ -9,34 +9,10 @@ import Button from 'react-bootstrap/Button';
 import '../assets/styles/wowsCategory.css'
 
 function WowsCategory(props) {
-    // Obtenido de https://www.geeksforgeeks.org/how-to-toggle-play-pause-in-reactjs-with-audio/
-    // var state = {
- 
-    //     // Get audio file in a variable
-    //     audio: new Audio(props.audio),
- 
-    //     // Set initial state of song
-    //     isPlaying: false,
-    // };
     var audio = new Audio(props.audio)
-    // const [isPlaying, setIsPlaying] = useState(false);
-
+    
     function PlayAudio() {
-        // let isPlaying = state.isPlaying;
-        // setIsPlaying(false);
- 
-        // if (isPlaying) {
-        //     // Pause the song if it is playing
-        //     audio.pause();
-        // } else {
-        //     setIsPlaying(true);
-        //     // Play the song if it is paused
-        //     audio.play();
-        // }
         audio.play()
-        // Change the state of song
-        // setState({ isPlaying: !isPlaying });
-        
     }
     
     return (

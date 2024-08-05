@@ -8,3 +8,15 @@
 .listDiv {
     margin-bottom: 10px;
 }
+
+.dropdown {
+    display: flex;
+    justify-content: end;
+    margin-right: 12%;
+}
+
+#dropdown-basic-button {
+    background-color: #275dad;
+    border-color: #275dad;
+    font-family: Helvetica;
+}
