@@ -3,24 +3,36 @@
     margin-right: 11%;
 }
 
-.imgCol {
+.descriptionWow {
+    margin-left: 12.5%;
+}
+
+#imgColWow {
     display: flex;
-    justify-content: end;
+    justify-content: start;
 } 
 
-.imgPoster {
+#imgPosterWow {
     width: 50%;
     height: fit-content;
 }
 
 @media (max-width: 500px) {
-    .imgPoster {
+    #imgPosterWow {
         width: 75%;
     }
 }
 
 @media (min-width:1281px) {
-    .imgPoster {
+    #imgPosterWow {
         width: 25%;
     }
+}
+
+.vstack {
+    margin-left: 12.5%;
+}
+
+.btn-secondary {
+    margin-left: 5px;
 }

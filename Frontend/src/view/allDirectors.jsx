@@ -2,7 +2,7 @@ import { React, useState, useEffect } from 'react'
 import Navbar from '../Components/navbar'
 import Footer from '../Components/footer'
 import BreadcrumbCategory from '../Components/breadcrumbsForCategory'
-import InfoList from '../Components/infoAsList'
+import ListCategory from '../Components/listCategory'
 
 import '../assets/styles/allMovies.css'
 
@@ -40,7 +40,7 @@ const AllDirectors = () => {
             {
                 isLoading ? 
                 <p className='categoryLoading'>Cargando...</p> : 
-                <InfoList info={directors} />
+                <ListCategory info={directors} />
             }
             <Footer />
         </div>
