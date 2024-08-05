@@ -85,6 +85,4 @@ function CardCategoryGroup() {
   );
 }
 
-// <a href="https://www.flaticon.es/iconos-gratis/guau" title="guau iconos">Guau iconos creados por Freepik - Flaticon</a>
-{/* <a href="https://www.flaticon.es/iconos-gratis/mediana" title="mediana iconos">Mediana iconos creados por Three musketeers - Flaticon</a> */}
 export default CardCategoryGroup;
