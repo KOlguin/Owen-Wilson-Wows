@@ -1,3 +1,5 @@
+import React from 'react'
+
 import CardGroup from 'react-bootstrap/CardGroup';
 
 import CardCategory from './cardCategory';
