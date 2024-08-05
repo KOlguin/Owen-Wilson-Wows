@@ -46,3 +46,8 @@ $theme-colors: (
 
 }
 
+#homePrincipalDiv {
+  display: flex;
+  flex-direction: column;
+}
+

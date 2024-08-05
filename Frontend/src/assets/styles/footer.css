@@ -4,8 +4,8 @@ footer {
     padding-right: 5%;
     background-color: #F6F6F6;
     font-family: Helvetica;
-    position: fixed;
-    bottom: 0;
+    /* position: relative;
+    bottom: 0; */
 }
 
 .footerInfo {
