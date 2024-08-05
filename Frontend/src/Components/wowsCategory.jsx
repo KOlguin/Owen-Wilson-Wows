@@ -47,7 +47,7 @@ function WowsCategory(props) {
                     <p className='descriptionWow'><b>Momento en el cual se dice la línea anterior</b>: {props.timestamp}</p>
                     <p className='descriptionWow'><b>Audio con la línea anterior</b>:
                         <Button variant="secondary" size="sm" onClick={PlayPause} style={{backgroundColor: "#275dad", borderColor:"#275dad"}}>
-                            Play | Pause
+                            Play
                         </Button>
                     </p>
                 </Stack>

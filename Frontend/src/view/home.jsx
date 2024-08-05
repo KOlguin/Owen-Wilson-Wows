@@ -7,7 +7,7 @@ import '../assets/styles/home.css'
 
 const Home = () => {
     return (
-        <div>
+        <div id="homePrincipalDiv">
             <Navbar />
             <div id='homeRectangle'>
                 <h2 id='homeTitle'>Los Wows del Actor Owen Wilson</h2>
