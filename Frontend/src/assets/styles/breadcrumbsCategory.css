@@ -1,0 +1,19 @@
+#breadcrumDiv {
+    margin-top: 10px;
+    margin-left: 10%;
+}
+
+.breadcrumb {
+    font-family: Helvetica;
+    font-size: 15px;
+    color: #7a7a7a
+}
+
+.breadcrumb-item a {
+    color: #7a7a7a;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    font-weight: bold;
+}
